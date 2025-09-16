@@ -1,11 +1,11 @@
 module Traffic_Light_Controller (
-    input clk,          // Clock input for timing
-    input rst,          // Reset signal to restart the controller
-    output reg [2:0] NS, // North-South lights (Red, Yellow, Green)
-    output reg [2:0] EW  // East-West lights (Red, Yellow, Green)
+    input clk,         
+    input rst,         
+    output reg [2:0] NS, 
+    output reg [2:0] EW  
 );
 
-    // State encoding
+    
     typedef enum logic [1:0] {
         S0 = 2'b00,  // NS Green, EW Red
         S1 = 2'b01,  // NS Yellow, EW Red
